@@ -10,6 +10,7 @@
   },
   "repository": "",
   "scripts": {
+    "preinstall": "bower install",
     "build": "ember build",
     "start": "ember server",
     "test": "ember test"
