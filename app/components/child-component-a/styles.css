@@ -1,0 +1,3 @@
+.background {
+  composes: background from '../base-component/styles.css';
+}
