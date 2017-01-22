@@ -1,10 +1,20 @@
 /*jshint node:true*/
 /* global require, module */
+var resolve = require('path').resolve;
+
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    cssModules: {
+      plugins: [
+        require('postcss-retina-bg-img')({
+          assetDirectory: resolve(__dirname, 'public')
+        }),
+        require('postcss-reporter')
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
